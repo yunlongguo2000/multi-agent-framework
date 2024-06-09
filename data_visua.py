@@ -1,6 +1,7 @@
 import numpy as np
-Code_dir_path = 'path_to_multi-agent-framework/multi-agent-framework/' # Put the current code directory path here
-Saving_path = Code_dir_path + 'Env2_BoxNet2'
+# Code_dir_path = 'path_to_multi-agent-framework/multi-agent-framework/' # Put the current code directory path here
+Code_dir_path = 'G:/projects/multi-agent-framework/'
+Saving_path = Code_dir_path + 'Env1_BoxNet1/'
 
 candidate_list = [('CMAS','_wo_any_dialogue_history'), ('CMAS','_w_only_state_action_history'),
                   ('HMAS-2','_wo_any_dialogue_history'), ('HMAS-2','_w_only_state_action_history'),
@@ -10,11 +11,11 @@ print('-------#####------------#####------------#####--------')
 Env_action_time_list_best_total = []; API_query_time_list_best_total = []; token_num_list_best_total = []
 for pg_row_num, pg_column_num in [(2, 2), (2, 4), (4, 4), (4,8)]:
     Env_action_time_list = []; API_query_time_list = []; token_num_list = [];
-    for iteration_num in range(10):
+    for iteration_num in range(1):
         Env_action_time_list.append(1e10); API_query_time_list.append(1e10); token_num_list.append(1e10)
         for cen_decen_framework, dialogue_history_method in candidate_list:
             #print(f'Row num: {pg_row_num}, Column num: {pg_column_num}, {cen_decen_framework}{dialogue_history_method}')
-                with open(saving_path +f'env_pg_state_{pg_row_num}_{pg_column_num}/pg_state{iteration_num}/{cen_decen_framework}{dialogue_history_method}/success_failure.txt', 'r') as file:
+                with open(Saving_path +f'env_pg_state_{pg_row_num}_{pg_column_num}/pg_state{iteration_num}/{cen_decen_framework}{dialogue_history_method}/success_failure.txt', 'r') as file:
                     first_line = file.readline().strip()
                 #print(first_line)
 

@@ -267,9 +267,11 @@ def run_exp(Saving_path, pg_row_num, pg_column_num, iteration_num, query_time_li
   return user_prompt_list, response_total_list, pg_state_list, success_failure, index_query_times, token_num_count_list, Saving_path_result
 
 
-Code_dir_path = 'path_to_multi-agent-framework/multi-agent-framework/' # Put the current code directory path here
+# Code_dir_path = 'path_to_multi-agent-framework/multi-agent-framework/' # Put the current code directory path here
+Code_dir_path = 'G:/projects/multi-agent-framework/'
 Saving_path = Code_dir_path + 'Env1_BoxNet1'
-model_name = 'gpt-4-0613'  #'gpt-4-0613', 'gpt-3.5-turbo-16k-0613'
+# model_name = 'gpt-4-0613'  #'gpt-4-0613', 'gpt-3.5-turbo-16k-0613'
+model_name = 'gpt-3.5-turbo'
 print(f'-------------------Model name: {model_name}-------------------')
 for pg_row_num, pg_column_num in [(2,2), (2,4), (4,4), (4,8)]:
   if pg_row_num == 4 and pg_column_num == 8:
