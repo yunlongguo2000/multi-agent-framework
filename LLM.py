@@ -6,7 +6,7 @@ enc = tiktoken.get_encoding("cl100k_base")
 assert enc.decode(enc.encode("hello world")) == "hello world"
 enc = tiktoken.encoding_for_model("gpt-3.5-turbo")
 
-openai_api_key_name = 'sk-NThahNYJGgHwtbHjqRZBiwSJrbCUxYRXtFzLUUjO3Sd3D7lP'
+openai_api_key_name = 'sk-'
 openai_base_url = 'https://api.chatanywhere.tech/v1'
 
 client = openai.OpenAI(
